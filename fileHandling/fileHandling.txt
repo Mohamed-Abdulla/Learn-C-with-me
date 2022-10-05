@@ -1,0 +1,63 @@
+File Handling in C
+
+In programming, we may require some specific input data to be generated several numbers of times. 
+Sometimes, it is not enough to only display the data on the console. The data to be displayed may be very large, and only a limited 
+amount of data can be displayed on the console, and since the memory is volatile, it is impossible to recover the programmatically 
+generated data again and again. However, if we need to do so, we may store it onto the local file system which is volatile and can be 
+accessed every time. Here, comes the need of file handling in C.
+
+
+File handling in C enables us to create, update, read, and delete the files stored on the local file system through our C program. 
+The following operations can be performed on a file.
+
+Creation of the new file
+Opening an existing file
+Reading from the file
+Writing to the file
+Deleting the file
+
+The fopen function works in the following way.
+
+Firstly, It searches the file to be opened.
+Then, it loads the file from the disk and place it into the buffer. The buffer is used to provide efficiency for the read operations.
+It sets up a character pointer which points to the first character of the file.
+
+Reading File : fscanf() function
+The fscanf() function is used to read set of characters from file. It reads a word from the file and returns EOF at the end of file.
+
+
+Writing File : fprintf() function
+The fprintf() function is used to write set of characters into file. It sends formatted output to a stream.
+
+C fputc() and fgetc()
+Writing File : fputc() function
+The fputc() function is used to write a single character into file. It outputs a character to a stream.
+
+
+Reading File : fgetc() function
+The fgetc() function returns a single character from the file. It gets a character from the stream. It returns EOF at the end of file
+
+
+C fputs() and fgets()
+The fputs() and fgets() in C programming are used to write and read string from stream. 
+Let's see examples of writing and reading file using fgets() and fgets() functions.
+
+Writing File : fputs() function
+The fputs() function writes a line of characters into file. It outputs string to a stream.
+
+Reading File : fgets() function
+The fgets() function reads a line of characters from file. It gets string from a stream.
+
+C fseek() function
+The fseek() function is used to set the file pointer to the specified offset. It is used to write data into file at desired location.
+
+
+C rewind() function
+The rewind() function sets the file pointer at the beginning of the stream. It is useful if you have to use stream many times.
+
+
+C ftell() function---------------------------------
+
+The ftell() function returns the current file position of the specified stream. We can use ftell() function to get the total size of a file 
+after moving file pointer at the end of file. 
+We can use SEEK_END constant to move the file pointer at the end of file.
