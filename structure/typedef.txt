@@ -1,0 +1,35 @@
+typedef in C
+The typedef is a keyword used in C programming to provide some meaningful names to the already existing variable in the C program. 
+It behaves similarly as we define the alias for the commands. In short, we can say that this keyword is used to redefine the name 
+of an already existing variable.
+
+Syntax of typedef
+typedef <existing_name> <alias_name>
+
+struct student  
+{  
+char name[20];  
+int age;  
+};  
+typedef struct student stud;  
+stud s1, s2;   
+
+The above typedef can be written as:
+
+typedef struct student  
+{  
+char name[20];  
+int age;   
+} stud;  
+stud s1,s2;  
+
+From the above declarations, we conclude that typedef keyword reduces the length of the code and complexity of data types. 
+It also helps in understanding the program.
+
+
+Using typedef with pointers
+We can also provide another name or alias name to the pointer variables with the help of the typedef.
+
+typedef int* ptr;  
+ptr p1, p2 ;  
+In the above statement, p1 and p2 are the variables of type 'ptr'.

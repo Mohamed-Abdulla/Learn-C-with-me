@@ -1,0 +1,93 @@
+In the above program, we have stored data of 3 students in the structure. However, the complexity of the program will be increased if there are 20 students.
+ In that case, we will have to declare 20 different structure variables and store them one by one.
+ This will always be tough since we will have to declare a variable every time we add a student.
+  Remembering the name of all the variables is also a very tricky task. However, 
+  c enables us to declare an array of structures by using which, we can avoid declaring the different structure variables; 
+  instead we can make a collection containing all the structures that store the information of different entities.
+
+Array of Structures in C----------------------------------------------------------------
+
+An array of structres in C can be defined as the collection of multiple structures variables where each variable contains 
+information about different entities. The array of structures in C are used to store information about multiple entities of 
+different data types. The array of structures is also known as the collection of structures.
+
+
+Nested Structure in C---------------------------------------------------------------
+-
+C provides us the feature of nesting one structure within another structure by using which, complex data types are created.
+For example, we may need to store the address of an entity employee in a structure. The attribute address may also have the subparts as 
+street number, city, state, and pin code. Hence, to store the address of the employee, we need to store the address of the employee into a 
+separate structure and nest the structure address into the structure employee.
+Consider the following program.
+
+
+The structure can be nested in the following ways.
+
+By separate structure
+By Embedded structure
+
+1) Separate structure
+Here, we create two structures, but the dependent structure should be used inside the main structure as a member.
+Consider the following example.
+
+struct Date  
+{  
+   int dd;  
+   int mm;  
+   int yyyy;   
+};  
+struct Employee  
+{     
+   int id;  
+   char name[20];  
+   struct Date doj;  
+}emp1; 
+
+
+2) Embedded structure
+The embedded structure enables us to declare the structure inside the structure. Hence, it requires less line of codes
+but it can not be used in multiple data structures. Consider the following example.
+
+struct Employee  
+{     
+   int id;  
+   char name[20];  
+   struct Date  
+    {  
+      int dd;  
+      int mm;  
+      int yyyy;   
+    }doj;  
+}emp1;  
+
+
+Accessing Nested Structure
+We can access the member of the nested structure by Outer_Structure.Nested_Structure.member as given below:
+
+e1.doj.dd  
+e1.doj.mm  
+e1.doj.yyyy  
+
+
+
+Passing structure to function----------------------------------------------------------------
+
+Just like other variables, a structure can also be passed to a function. 
+We may pass the structure members into the function or pass the structure variable at once. 
+Consider the following example to pass the structure variable employee
+to a function display() which is used to display the details of an employee
+
+How to avoid the structure padding in C?
+The structural padding is an in-built process that is automatically done by the compiler. 
+Sometimes it required to avoid the structure padding in C as it makes the size of the structure greater than the size of the structure members.
+
+We can avoid the structure padding in C in two ways:
+
+Using #pragma pack(1) directive ----------------------------------------------------------------
+
+In the above code, we have used the #pragma pack(1) directive to avoid the structure padding.
+If we do not use this directive, then the output of the above program would be 16 bytes.
+But the actual size of the structure members is 13 bytes, so 3 bytes are wasted. 
+To avoid the wastage of memory, we use the #pragma pack(1) directive to provide the 1-byte packaging.
+
+Using attribute--------------------------------------------------------------------------------
