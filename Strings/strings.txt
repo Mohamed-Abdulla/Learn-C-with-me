@@ -1,0 +1,76 @@
+The string can be defined as the one-dimensional array of characters terminated by a null ('\0'). 
+
+The character array or the string is used to manipulate text such as word or sentences. 
+Each character in the array occupies one byte of memory, and the last character must always be 0. 
+The termination character ('\0') is important in a string since it is the only way to identify where the string ends. 
+When we define a string as char s[10], the character s[10] is implicitly initialized with the null in the memory.
+
+There are two ways to declare a string in c language.
+
+By char array
+By string literal
+
+
+Let's see the example of declaring string by char array in C language.
+
+char ch[10]={'j', 'a', 'v', 'a', 't', 'p', 'o', 'i', 'n', 't', '\0'};  
+
+While declaring string, size is not mandatory. So we can write the above code as given below:
+char ch[]={'j', 'a', 'v', 'a', 't', 'p', 'o', 'i', 'n', 't', '\0'};  
+
+We can also define the string by the string literal in C language. For example:
+char ch[]="javatpoint";  //In such case, '\0' will be appended at the end of the string by the compiler.
+
+
+
+Difference between char array and string literal----------------------------------------------------------------
+There are two main differences between char array and literal.
+
+We need to add the null character '\0' at the end of the array by ourself whereas, 
+it is appended internally by the compiler in the case of the character array.
+The string literal cannot be reassigned to another set of characters whereas, we can reassign the characters of the array.
+
+
+Traversing String--------------------------------------------------------
+
+Traversing the string is one of the most important aspects in any of the programming languages. 
+We may need to manipulate a very large text which can be done by traversing the text.
+Traversing string is somewhat different from the traversing an integer array.
+We need to know the length of the array to traverse an integer array, whereas we may use the null character
+in the case of string to identify the end the string and terminate the loop.
+
+Hence, there are two ways to traverse a string.
+
+By using the length of string
+By using the null character.
+Let's discuss each one of them
+
+
+Accepting string as the input ----------------------------------------------------------------
+    
+Till now, we have used scanf to accept the input from the user. 
+However, it can also be used in the case of strings but with a different scenario. 
+Consider the below code which stores the string while space is encountered.
+
+
+
+C gets() function----------------------------------------------------------------
+
+The gets() function enables the user to enter some characters followed by the enter key. 
+All the characters entered by the user get stored in a character array. The null character is added to the array to make it a string. 
+The gets() allows the user to enter the space-separated strings. 
+It returns the string entered by the user
+
+The gets() function is risky to use since it doesn't perform any array bound checking and keep reading the characters 
+until the new line (enter) is encountered. It suffers from buffer overflow, which can be avoided by using fgets().
+The fgets() makes sure that not more than the maximum limit of characters are read. Consider the following example.
+
+C puts() function----------------------------------------------------------------
+
+The puts() function is very much similar to printf() function.
+The puts() function is used to print the string on the console which is previously read by using gets() or scanf() function. 
+The puts() function returns an integer value representing the number of characters being printed on the console. 
+Since, it prints an additional newline character with the string, which moves the cursor to the new line on the console, 
+the integer value returned by puts() will always be equal to the number of characters present in the string plus 1.
+
+int puts(char[])  
