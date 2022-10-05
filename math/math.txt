@@ -1,0 +1,2 @@
+C Programming allows us to perform mathematical operations through the functions defined in <math.h> header file. 
+The <math.h> header file contains various methods for performing mathematical operations such as sqrt(), pow(), ceil(), floor() etc.
